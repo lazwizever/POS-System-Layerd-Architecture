@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos_system.controller.AdminFormController">
+   <children>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#273c75" height="496.0" layoutX="-40.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="404.0" />
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" focusTraversable="false" layoutX="55.0" layoutY="257.0" onAction="#moveToSystemReportsOnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="190.0" prefWidth="248.0" style="-fx-background-color: #273c75; -fx-border-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 5;" text="System Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" focusTraversable="false" layoutX="55.0" layoutY="29.0" onAction="#manageItemsOnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" prefHeight="190.0" prefWidth="248.0" style="-fx-background-color: #273c75; -fx-border-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 5;" text="Manage Items" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="115.0" fitWidth="124.0" layoutX="115.0" layoutY="280.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/report-3-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="124.0" fitWidth="127.0" layoutX="116.0" layoutY="54.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/white-edit-icon-4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="147.0" fitWidth="150.0" layoutX="482.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/manager-modified.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="480.0" layoutY="247.0" onAction="#logOutOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #718093; -fx-background-radius: 10;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="385.0" layoutY="5.0" prefHeight="86.0" prefWidth="339.0" text="WELCOME Jason !">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="453.0" layoutY="314.0" prefHeight="109.0" prefWidth="204.0" text="21:25">
+         <font>
+            <Font name="System Bold" size="75.0" />
+         </font>
+      </Label>
+      <Label layoutX="464.0" layoutY="423.0" prefHeight="45.0" prefWidth="182.0" text="2000-03-26">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="systemReports" prefHeight="743.0" prefWidth="1216.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos_system.controller.SystemReportsController">
+   <children>
+      <TableView fx:id="tblReports" layoutX="328.0" layoutY="183.0" prefHeight="490.0" prefWidth="864.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="170.0" text="Item Code" />
+          <TableColumn fx:id="colSales" prefWidth="181.0" text="Sales" />
+            <TableColumn fx:id="colIncome" prefWidth="171.0" text="Income" />
+            <TableColumn fx:id="colLost" prefWidth="178.0" text="Loss" />
+            <TableColumn fx:id="colProfit" minWidth="5.0" prefWidth="177.0" text="Profit" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#273c75" height="124.0" layoutX="289.0" layoutY="-26.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="927.0" />
+      <JFXButton fx:id="dailyIncome" alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="340.0" layoutY="14.0" onAction="#dailyIncomeOnAction" prefHeight="60.0" prefWidth="248.0" style="-fx-background-color: #273c75; -fx-border-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 5;" text="Daily Income" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="monthlyIncome" alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="634.0" layoutY="14.0" onAction="#monthlyIncomeOnAction" prefHeight="60.0" prefWidth="248.0" style="-fx-background-color: #273c75; -fx-border-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 5;" text="Monthly Income" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="annualIncome" alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="921.0" layoutY="14.0" onAction="#annualIncomeOnAction" prefHeight="60.0" prefWidth="248.0" style="-fx-background-color: #273c75; -fx-border-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 5;" text="Annual Income" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXDatePicker fx:id="selectDate" defaultColor="#a2a3a8" disable="true" layoutX="366.0" layoutY="123.0" onAction="#visibleDailyIncome" prefHeight="31.0" prefWidth="225.0" promptText="Select Date" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="318.0" layoutX="18.0" layoutY="98.0" opacity="0.41" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="258.0" />
+      <Label layoutX="85.0" layoutY="273.0" prefHeight="32.0" prefWidth="125.0" text="2000-03-26">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="289.0" prefHeight="103.0" prefWidth="184.0" text="08:26">
+         <font>
+            <Font name="System Bold" size="70.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="474.0" prefHeight="32.0" prefWidth="173.0" text="Seasonal Trends">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Line endX="-24.0" layoutX="305.0" layoutY="491.0" startX="-100.0" strokeWidth="2.0" />
+      <Line endX="100.0" layoutX="95.0" layoutY="476.0" startX="100.0" startY="31.0" strokeWidth="2.0" />
+      <Separator layoutX="302.0" layoutY="128.0" orientation="VERTICAL" prefHeight="599.0" prefWidth="2.0" />
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="14.0" layoutY="10.0" onAction="#moveAdminFormOnAction" prefHeight="52.0" prefWidth="62.0" style="-fx-background-color: #273c75; -fx-background-radius: 10;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView disable="true" fitHeight="31.0" fitWidth="29.0" layoutX="31.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/home12345.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblIncome1" layoutX="332.0" layoutY="688.0" prefHeight="31.0" prefWidth="132.0" text="Total Income :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLost1" layoutX="688.0" layoutY="688.0" prefHeight="31.0" prefWidth="53.0" text="Lost :" textFill="#ff2020">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProfit0" layoutX="983.0" layoutY="688.0" prefHeight="31.0" prefWidth="62.0" text="Profit :" textFill="#167c10">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblIncome" layoutX="479.0" layoutY="688.0" prefHeight="31.0" prefWidth="88.0" text="0.00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLost" layoutX="758.0" layoutY="688.0" prefHeight="31.0" prefWidth="97.0" text="0.00" textFill="#f81818">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProfit" layoutX="1062.0" layoutY="688.0" prefHeight="31.0" prefWidth="104.0" text="0.00" textFill="#167c10">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbYear" disable="true" layoutX="649.0" layoutY="123.0" prefHeight="31.0" prefWidth="88.0" promptText="Year" />
+      <JFXComboBox fx:id="cmbMonth" disable="true" layoutX="758.0" layoutY="123.0" onAction="#visibleMonthlyIncome" prefHeight="31.0" prefWidth="132.0" promptText="Month" />
+      <JFXComboBox fx:id="cmbAnnualYear" disable="true" layoutX="971.0" layoutY="123.0" onAction="#visibleAnnualIncome" prefHeight="31.0" prefWidth="148.0" promptText="Year" />
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="29.0" layoutY="660.0" onAction="#viewOnAction" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: #a2a3a8;" text="View" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="31.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="110.0" fitWidth="125.0" layoutX="81.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="96.0" fitWidth="125.0" layoutX="99.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/manager-modified.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="81.0" layoutY="225.0" prefHeight="32.0" prefWidth="132.0" text="Jason Smith">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="selectDateFrom" defaultColor="#a2a3a8" layoutX="31.0" layoutY="527.0" prefHeight="31.0" prefWidth="225.0" promptText="Select Date From" />
+      <JFXDatePicker fx:id="selectDateTo" defaultColor="#a2a3a8" layoutX="31.0" layoutY="599.0" prefHeight="31.0" prefWidth="225.0" promptText="Select Date To" />
+      <Separator layoutX="14.0" layoutY="459.0" prefHeight="2.0" prefWidth="265.0" />
+      <Separator layoutX="611.0" layoutY="113.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="2.0" />
+      <Separator layoutX="907.0" layoutY="113.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="2.0" />
+      <JFXRadioButton fx:id="itemReport" layoutX="117.0" layoutY="13.0" text="Item Report" textFill="#897f7f">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="customerReport" layoutX="117.0" layoutY="52.0" text="Customer Report" textFill="#897f7f">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <TableView fx:id="tblCustomerReport" layoutX="342.0" layoutY="199.0" prefHeight="490.0" prefWidth="833.0" visible="false">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="175.0" text="Customer Id" />
+          <TableColumn fx:id="colCustomerName" prefWidth="442.0" text="Customer Name" />
+            <TableColumn fx:id="colTotal" prefWidth="215.0" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

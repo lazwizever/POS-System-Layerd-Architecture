@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="userFormContext" prefHeight="496.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos_system.controller.UserFormController">
+   <children>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#273c75" height="496.0" layoutX="-30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="404.0" />
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" focusTraversable="false" layoutX="65.0" layoutY="259.0" onAction="#manageOrderOnAction" prefHeight="190.0" prefWidth="248.0" style="-fx-background-color: #273c75; -fx-border-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 5;" text="Manage Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" focusTraversable="false" layoutX="65.0" layoutY="31.0" onAction="#CustomerPlaceOrderOnAction" prefHeight="190.0" prefWidth="248.0" style="-fx-background-color: #273c75; -fx-border-color: #ffffff; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 5;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="115.0" fitWidth="124.0" layoutX="142.0" layoutY="280.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExistAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/pngfind.com-sample-png-1329836.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="124.0" fitWidth="127.0" layoutX="126.0" layoutY="56.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExistAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/pngaaa.com-1172027.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="147.0" fitWidth="139.0" layoutX="510.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/cashier%20girl-modified.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="505.0" layoutY="248.0" onAction="#backToLoginFormOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #718093; -fx-background-radius: 10;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="391.0" prefHeight="86.0" prefWidth="378.0" text="WELCOME Megan !">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="478.0" layoutY="315.0" prefHeight="109.0" prefWidth="273.0" text="21:25">
+         <font>
+            <Font name="System Bold" size="75.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="489.0" layoutY="424.0" prefHeight="47.0" prefWidth="256.0" text="2000-03-26">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
